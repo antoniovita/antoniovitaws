@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PiHouseSimpleBold, PiUserCircleBold, PiBookBookmarkBold, PiCertificateBold, PiMailboxBold, PiListBold, PiXBold} from "react-icons/pi";
+import { PiHouseSimpleBold, PiUserCircleBold, PiBookBookmarkBold, PiCertificateBold, PiMailboxBold, PiListBold, PiXBold, PiBookOpenBold} from "react-icons/pi";
 
 
 const NavBar = () => {
@@ -12,7 +12,7 @@ const NavBar = () => {
         { name: 'Home', icon: PiHouseSimpleBold, href: '#' },
         { name: 'About', icon: PiUserCircleBold, href: '#' },
         { name: 'Experience', icon: PiCertificateBold, href: '#' },
-        { name: 'Projects', icon: PiBookBookmarkBold, href: '#' },
+        { name: 'Projects', icon: PiBookOpenBold, href: '#' },
         { name: 'Contact', icon: PiMailboxBold, href: '#' },
     ];
 
