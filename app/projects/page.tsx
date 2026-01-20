@@ -235,7 +235,7 @@ const Projects = () => {
       technologies: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "Prisma Database"],
       github: "#",
       stars: 0,
-      forks: 0,
+      forks: 3,
       date: "2025",
       achievements: [
         "Recriação de fluxos do sistema SAU",

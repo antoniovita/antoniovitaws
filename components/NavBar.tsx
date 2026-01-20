@@ -15,7 +15,6 @@ const NavBar = () => {
         { name: 'About', icon: PiUserCircleBold, href: '/about' },
         { name: 'Experience', icon: PiCertificateBold, href: '/experience' },
         { name: 'Projects', icon: PiBookOpenBold, href: '/projects' },
-        { name: 'Contact', icon: PiMailboxBold, href: '/contact' },
     ];
 
     const isActiveRoute = (href: string) => {

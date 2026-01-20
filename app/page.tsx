@@ -259,6 +259,7 @@ export default function Home() {
               <div className="bg-white border border-gray-200 rounded-2xl p-4">
                 <Swiper
                   modules={[Autoplay]}
+                  autoplay={{ delay: 3000 }}
                   spaceBetween={12}
                   slidesPerView={1}
                   navigation
@@ -280,13 +281,13 @@ export default function Home() {
                           <PiGithubLogo size={16} />
                           Code
                         </a>
-                        <a
-                          href=""
+                        <Link
+                          href="/projects"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
                           View details
                           <PiArrowRightBold size={14} />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -307,13 +308,13 @@ export default function Home() {
                           <PiGithubLogo size={16} />
                           Code
                         </a>
-                        <a
-                          href="#"
+                        <Link
+                          href="/projects"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
                           View details
                           <PiArrowRightBold size={14} />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -334,13 +335,13 @@ export default function Home() {
                           <PiGithubLogo size={16} />
                           Code
                         </a>
-                        <a
-                          href="#"
+                        <Link
+                          href="/projects"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
                           View details
                           <PiArrowRightBold size={14} />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -397,7 +398,7 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-2xl p-4">
               <Swiper
                 modules={[Autoplay]}
-                autoplay={{ delay: 1000 }}
+                autoplay={{ delay: 3000 }}
                 spaceBetween={12}
                 slidesPerView={1}
                 className="w-full"
