@@ -7,18 +7,15 @@ import {
   PiMapPinBold,
   PiBriefcaseBold,
   PiGraduationCapBold,
-  PiGlobeBold,
   PiBookOpenBold,
-  PiUsersBold,
-  PiBriefcaseFill,
   PiInstagramLogo,
   PiFileArrowDownBold,
   PiArrowRightBold,
   PiGithubLogo,
   PiLinkedinLogo,
-  PiMedal,
   PiMedalBold,
 } from "react-icons/pi";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -74,11 +71,11 @@ export default function Home() {
 
             {/* action buttons */}
             <div className="flex flex-wrap gap-3 pt-4">
-              <button className="inline-flex hover:cursor-pointer text-sm items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors font-medium">
+              <Link className="inline-flex hover:cursor-pointer text-sm items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors font-medium" href={"/projects"}>
                 <PiBookOpenBold size={18} />
                 View Projects
                 <PiArrowRightBold />
-              </button>
+              </Link>
               <a className="inline-flex text-sm hover:cursor-pointer items-center gap-2 px-6 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 transition-colors font-medium"
                 href="/cv.pdf"
                 download
