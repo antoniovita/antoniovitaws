@@ -16,6 +16,8 @@ import {
   PiArrowRightBold,
   PiGithubLogo,
   PiLinkedinLogo,
+  PiMedal,
+  PiMedalBold,
 } from "react-icons/pi";
 
 export default function Home() {
@@ -23,7 +25,7 @@ export default function Home() {
 
     
     <div className="flex justify-center items-center min-h-screen p-4 md:p-8">
-      <div className="w-[80%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r">
+      <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r">
         
         {/* main section */}
         <div className="grid grid-cols-1 mt-20 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -51,38 +53,39 @@ export default function Home() {
               </h1>
             </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Software Engineer, Full Stack Developer e Estudante de Ciência da Computação.
-              Especialista em desenvolvimento web moderno, arquitetura de software e
-              experiência do usuário. Apaixonado por criar soluções inovadoras.
+            <p className="text-md text-gray-700 leading-relaxed">
+              I am a Software Engineer and Computer Science student specializing in modern web development and blockchain technologies. As a Full Stack Developer and Smart Contract Developer in the Web3 ecosystem, I build decentralized applications with a strong focus on performance, security, and scalability. I am passionate about software architecture, innovative solutions, and turning complex ideas into reliable, real-world products.              
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="flex items-center">
-                <span className="text-sm font-medium">📝 Smart Contract Developer</span>
+                <span className="text-sm font-medium">📝 Smart Contract & Web3 Developer</span>
               </div>
               <div className="flex items-center">
-                <span className="text-sm font-medium">💻 Full Stack Developer </span>
+                <span className="text-sm font-medium">💻 Full Stack Engineer </span>
               </div>
               <div className="flex items-center">
-                <span className="text-sm font-medium">🎓 Computer Science Merit Scholar</span>
+                <span className="text-sm font-medium">🎓 Merit Scholarship Recipient</span>
               </div>
               <div className="flex items-center">
-                <span className="text-sm font-medium">🌎 Possibly working in 5 languages</span>
+                <span className="text-sm font-medium">🌎 Open to Remote work Worldwide</span>
               </div>
             </div>
 
             {/* action buttons */}
             <div className="flex flex-wrap gap-3 pt-4">
-              <button className="inline-flex text-sm items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors font-medium">
+              <button className="inline-flex hover:cursor-pointer text-sm items-center gap-2 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors font-medium">
                 <PiBookOpenBold size={18} />
-                Ver Projetos
+                View Projects
                 <PiArrowRightBold />
               </button>
-              <button className="inline-flex text-sm items-center gap-2 px-6 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 transition-colors font-medium">
+              <a className="inline-flex text-sm hover:cursor-pointer items-center gap-2 px-6 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 transition-colors font-medium"
+                href="/cv.pdf"
+                download
+              >
                 <PiFileArrowDownBold size={18} />
                 Download my CV
-              </button>
+              </a>
             </div>
 
             {/* social */}
@@ -90,7 +93,7 @@ export default function Home() {
               <p className="text-sm text-gray-600 font-medium">Social Media</p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/antoniovita_fi/"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
                   <PiInstagramLogo className="text-black" size={20} />
@@ -98,7 +101,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://github.com/antoniovita"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
                   <PiGithubLogo className="text-black" size={20} />
@@ -106,7 +109,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/antonio-vita-6177922b7/"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
                   <PiLinkedinLogo className="text-black" size={20} />
@@ -123,7 +126,7 @@ export default function Home() {
                   href="/experience"
                   className="inline-flex items-center gap-2 text-xs ml-2 font-medium text-black hover:text-gray-700 transition-colors"
                 >
-                  Ver todas as experiências
+                  View more
                   <PiArrowRightBold size={16} />
                 </a>
               </div>
@@ -133,28 +136,15 @@ export default function Home() {
                 <div className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl">
                   <div>
                     <p className="text-sm font-semibold text-black">
-                      Full Stack Developer — Tech Startup
+                      Automation Intern — BTG Pactual
                     </p>
-                    <p className="text-xs text-gray-500">2023 – Present</p>
+                    <p className="text-xs text-gray-500">August 2025 – November 2025</p>
                     <p className="text-sm text-gray-700 mt-1">
-                      Desenvolvimento de aplicações web modernas com foco em performance,
-                      UX e arquitetura escalável.
+                      Built automation solutions with Python, Pandas, and AWS to optimize financial workflows and data processing. Automated reports and system integrations, reducing manual operations and improving efficiency in a high-performance investment banking environment.
                     </p>
                   </div>
-                </div>
+                </div>      
 
-                <div className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl">
-                  <div>
-                    <p className="text-sm font-semibold text-black">
-                      Computer Science Intern — University Lab
-                    </p>
-                    <p className="text-xs text-gray-500">2022 – 2023</p>
-                    <p className="text-sm text-gray-700 mt-1">
-                      Pesquisa em engenharia de software, desenvolvimento de projetos
-                      acadêmicos e suporte a sistemas internos.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -166,7 +156,7 @@ export default function Home() {
                   href="/education"
                   className="inline-flex items-center gap-2 text-xs font-medium text-black hover:text-gray-700 transition-colors"
                 >
-                  Ver toda formação
+                  View more
                   <PiArrowRightBold size={16} />
                 </a>
               </div>
@@ -177,21 +167,21 @@ export default function Home() {
                   <PiGraduationCapBold size={22} className="text-gray-700 mt-1" />
                   <div>
                     <p className="text-sm font-semibold text-black">
-                      Bacharelado em Ciência da Computação
+                      Computer Science Bachelor
                     </p>
                     <p className="text-xs text-gray-500">
-                      Universidade Federal do Rio de Janeiro — 2022 – 2026
+                    PUC Rio - 2025 - Present
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl">
-                  <PiBookOpenBold size={22} className="text-gray-700 mt-1" />
+                  <PiMedalBold size={22} className="text-gray-700 mt-1" />
                   <div>
                     <p className="text-sm font-semibold text-black">
-                      Curso Profissional de Full Stack Development
+                      Advanced English - C1  
                     </p>
-                    <p className="text-xs text-gray-500">Alura / Rocketseat — 2021 – 2022</p>
+                    <p className="text-xs text-gray-500">Cambridge — 2023 </p>
                   </div>
                 </div>
               </div>
@@ -204,12 +194,13 @@ export default function Home() {
             {/* image */}
             <div className="relative w-full max-w-md">
               <div className="relative bg-linear-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden aspect-3/4 flex items-center justify-center">
-
-                <div className="text-gray-400 text-center">
-                  <PiUsersBold size={120} className="mx-auto mb-4" />
-                  <p className="text-sm">Sua Foto Aqui</p>
-                </div>
-
+                <Image
+                  src="/me.jpeg"
+                  alt="Me"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 28rem, 100vw"
+                />
               </div>
             </div>
 
@@ -218,44 +209,42 @@ export default function Home() {
 
               <div className="bg-white border border-gray-200 rounded-2xl p-5">
                 <div className="flex items-center gap-3 mb-2">
-                  <PiUsersBold size={24} className="text-gray-600" />
                   <div>
-                    <p className="text-2xl font-bold text-black">20+</p>
-                    <p className="text-sm text-gray-600">Linguagens de programação</p>
+                    <p className="text-2xl font-bold text-black">5+</p>
+                    <p className="text-sm text-gray-600">Programming Languages</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white border border-gray-200 rounded-2xl p-5">
                 <div className="flex items-center gap-3 mb-2">
-                  <PiBriefcaseFill size={24} className="text-gray-600" />
                   <div>
                     <p className="text-2xl font-bold text-black">2+</p>
-                    <p className="text-sm text-gray-600">Anos de Experiência</p>
+                    <p className="text-sm text-gray-600">Years of Experience</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white border border-gray-200 rounded-2xl p-5">
                 <div className="flex items-center gap-3 mb-2">
-                  <PiGraduationCapBold size={24} className="text-gray-600" />
                   <div>
-                    <p className="text-2xl font-bold text-black">68</p>
-                    <p className="text-sm text-gray-600">Cursos Criados</p>
+                    <p className="text-2xl font-bold text-black">10+</p>
+                    <p className="text-sm text-gray-600">Projects Completed</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white border border-gray-200 rounded-2xl p-5">
                 <div className="flex items-center gap-3 mb-2">
-                  <PiGlobeBold size={24} className="text-gray-600" />
                   <div>
-                    <p className="text-2xl font-bold text-black">3</p>
-                    <p className="text-sm text-gray-600">Países Trabalhados</p>
+                    <p className="text-2xl font-bold text-black">5</p>
+                    <p className="text-sm text-gray-600">Languages Spoken</p>
                   </div>
                 </div>
               </div>
+
             </div>
+
 
             {/* projects */}
             <div className="w-full max-w-md lg:block hidden">
@@ -265,7 +254,7 @@ export default function Home() {
                   href="/projects"
                   className="inline-flex items-center gap-2 text-xs font-medium text-black hover:text-gray-700 transition-colors"
                 >
-                  Ver todos os projetos
+                  View more
                   <PiArrowRightBold size={16} />
                 </a>
               </div>
@@ -281,24 +270,24 @@ export default function Home() {
                   <SwiperSlide>
                     <div className="rounded-xl border border-gray-200 p-4">
                       <p className="text-sm font-semibold text-black">Portfolio Website</p>
-                      <p className="text-xs text-gray-500 mt-1">Next.js • Tailwind • UI/UX</p>
+                      <p className="text-xs text-gray-500 mt-1">Typescript • Next.js • Tailwind • UI/UX</p>
                       <p className="text-sm text-gray-700 mt-2">
-                        Portfólio moderno com layout responsivo, animações e páginas de projetos.
+                        Modern portfolio with responsive layout, animations, and project pages.
                       </p>
 
                       <div className="flex items-center gap-2 mt-4">
                         <a
-                          href="#"
+                          href="https://github.com/antoniovita/portfolio"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <PiGithubLogo size={16} />
-                          Código
+                          Code
                         </a>
                         <a
-                          href="#"
+                          href=""
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
-                          Ver projeto
+                          View details
                           <PiArrowRightBold size={14} />
                         </a>
                       </div>
@@ -307,26 +296,25 @@ export default function Home() {
 
                   <SwiperSlide>
                     <div className="rounded-xl border border-gray-200 p-4">
-                      <p className="text-sm font-semibold text-black">Smart Contract DApp</p>
-                      <p className="text-xs text-gray-500 mt-1">Solidity • Ethers • Web3</p>
+                      <p className="text-sm font-semibold text-black">Velt - Tokenized Yield Vault</p>
+                      <p className="text-xs text-gray-500 mt-1">Solidity • Hardhat • OpenZeppelin • Web3</p>
                       <p className="text-sm text-gray-700 mt-2">
-                        DApp para interação com smart contracts, wallet connect e dashboard de
-                        transações.
+                        Velt is an on-chain infrastructure for creating tokenized financial vaults based on ERC-4626.
                       </p>
 
                       <div className="flex items-center gap-2 mt-4">
                         <a
-                          href="#"
+                          href="https://github.com/antoniovita/velt"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <PiGithubLogo size={16} />
-                          Código
+                          Code
                         </a>
                         <a
                           href="#"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
-                          Ver projeto
+                          View details
                           <PiArrowRightBold size={14} />
                         </a>
                       </div>
@@ -335,26 +323,25 @@ export default function Home() {
 
                   <SwiperSlide>
                     <div className="rounded-xl border border-gray-200 p-4">
-                      <p className="text-sm font-semibold text-black">API & Dashboard</p>
-                      <p className="text-xs text-gray-500 mt-1">Node • PostgreSQL • React</p>
+                      <p className="text-sm font-semibold text-black">Fuoco - AI Productivity App</p>
+                      <p className="text-xs text-gray-500 mt-1"> Typescript • Expo • SQLite • llama.rn • LLM </p>
                       <p className="text-sm text-gray-700 mt-2">
-                        Backend com autenticação + painel administrativo para gestão de dados e
-                        relatórios.
+                        Fuoco is a privacy-first productivity app built with Expo and React Native to help users manage tasks, routines, expenses, and workouts.
                       </p>
 
                       <div className="flex items-center gap-2 mt-4">
                         <a
-                          href="#"
+                          href="https://github.com/antoniovita/fuoco"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <PiGithubLogo size={16} />
-                          Código
+                          Code
                         </a>
                         <a
                           href="#"
                           className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
-                          Ver projeto
+                          View details
                           <PiArrowRightBold size={14} />
                         </a>
                       </div>
@@ -405,7 +392,7 @@ export default function Home() {
                 href="/projects"
                 className="inline-flex items-center gap-2 text-xs font-medium text-black hover:text-gray-700 transition-colors"
               >
-                Ver todos os projetos
+                View
                 <PiArrowRightBold size={16} />
               </a>
             </div>
@@ -421,24 +408,24 @@ export default function Home() {
                 <SwiperSlide>
                   <div className="rounded-xl border border-gray-200 p-4">
                     <p className="text-sm font-semibold text-black">Portfolio Website</p>
-                    <p className="text-xs text-gray-500 mt-1">Next.js • Tailwind • UI/UX</p>
+                    <p className="text-xs text-gray-500 mt-1">Typescript • Next.js • Tailwind • UI/UX</p>
                     <p className="text-sm text-gray-700 mt-2">
-                      Portfólio moderno com layout responsivo, animações e páginas de projetos.
+                        Modern portfolio with responsive layout, animations, and project pages.
                     </p>
 
                     <div className="flex items-center gap-2 mt-4">
                       <a
-                        href="#"
+                        href="https://github.com/antoniovita/portfolio"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                       >
                         <PiGithubLogo size={16} />
-                        Código
+                        Code
                       </a>
                       <a
                         href="#"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
-                        Ver projeto
+                        View details
                         <PiArrowRightBold size={14} />
                       </a>
                     </div>
@@ -447,26 +434,25 @@ export default function Home() {
 
                 <SwiperSlide>
                   <div className="rounded-xl border border-gray-200 p-4">
-                    <p className="text-sm font-semibold text-black">Smart Contract DApp</p>
-                    <p className="text-xs text-gray-500 mt-1">Solidity • Ethers • Web3</p>
+                    <p className="text-sm font-semibold text-black">Velt - Tokenized Yield Vault</p>
+                    <p className="text-xs text-gray-500 mt-1">Solidity • Hardhat • OpenZeppelin • Web3</p>
                     <p className="text-sm text-gray-700 mt-2">
-                      DApp para interação com smart contracts, wallet connect e dashboard de
-                      transações.
+                        Velt is an on-chain infrastructure for creating tokenized financial vaults based on ERC-4626.
                     </p>
 
                     <div className="flex items-center gap-2 mt-4">
                       <a
-                        href="#"
+                        href="https://github.com/antoniovita/velt"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                       >
                         <PiGithubLogo size={16} />
-                        Código
+                        Code
                       </a>
                       <a
                         href="#"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
-                        Ver projeto
+                        View details
                         <PiArrowRightBold size={14} />
                       </a>
                     </div>
@@ -475,26 +461,25 @@ export default function Home() {
 
                 <SwiperSlide>
                   <div className="rounded-xl border border-gray-200 p-4">
-                    <p className="text-sm font-semibold text-black">API & Dashboard</p>
-                    <p className="text-xs text-gray-500 mt-1">Node • PostgreSQL • React</p>
+                    <p className="text-sm font-semibold text-black">Fuoco - AI Productivity App</p>
+                    <p className="text-xs text-gray-500 mt-1">Typescript • Expo • SQLite • llama.rn • LLM</p>
                     <p className="text-sm text-gray-700 mt-2">
-                      Backend com autenticação + painel administrativo para gestão de dados e
-                      relatórios.
+                        Fuoco is a privacy-first productivity app built with Expo and React Native to help users manage tasks, routines, expenses, and workouts.
                     </p>
 
                     <div className="flex items-center gap-2 mt-4">
                       <a
-                        href="#"
+                        href="https://github.com/antoniovita/fuoco"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                       >
                         <PiGithubLogo size={16} />
-                        Código
+                        Code
                       </a>
                       <a
                         href="#"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
-                        Ver projeto
+                        View details
                         <PiArrowRightBold size={14} />
                       </a>
                     </div>
@@ -511,7 +496,7 @@ export default function Home() {
                 href="/experience"
                 className="inline-flex items-center gap-2 text-xs ml-2 font-medium text-black hover:text-gray-700 transition-colors"
               >
-                Ver todas as experiências
+                View more
                 <PiArrowRightBold size={16} />
               </a>
             </div>
@@ -520,28 +505,15 @@ export default function Home() {
               <div className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl">
                 <div>
                   <p className="text-sm font-semibold text-black">
-                    Full Stack Developer — Tech Startup
+                    Automation Intern - BTG Pactual
                   </p>
-                  <p className="text-xs text-gray-500">2023 – Present</p>
+                  <p className="text-xs text-gray-500">August 2025 – November 2025</p>
                   <p className="text-sm text-gray-700 mt-1">
-                    Desenvolvimento de aplicações web modernas com foco em performance,
-                    UX e arquitetura escalável.
+                      Built automation solutions with Python, Pandas, and AWS to optimize financial workflows and data processing. Automated reports and system integrations, reducing manual operations and improving efficiency in a high-performance investment banking environment.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl">
-                <div>
-                  <p className="text-sm font-semibold text-black">
-                    Computer Science Intern — University Lab
-                  </p>
-                  <p className="text-xs text-gray-500">2022 – 2023</p>
-                  <p className="text-sm text-gray-700 mt-1">
-                    Pesquisa em engenharia de software, desenvolvimento de projetos
-                    acadêmicos e suporte a sistemas internos.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -552,7 +524,7 @@ export default function Home() {
                 href="/education"
                 className="inline-flex items-center gap-2 text-xs font-medium text-black hover:text-gray-700 transition-colors"
               >
-                Ver toda formação
+                View more
                 <PiArrowRightBold size={16} />
               </a>
             </div>
@@ -562,21 +534,21 @@ export default function Home() {
                 <PiGraduationCapBold size={22} className="text-gray-700 mt-1" />
                 <div>
                   <p className="text-sm font-semibold text-black">
-                    Bacharelado em Ciência da Computação
+                    Computer Science Bachelor
                   </p>
                   <p className="text-xs text-gray-500">
-                    Universidade Federal do Rio de Janeiro — 2022 – 2026
+                    PUC Rio - 2025 - Present
                   </p>
                 </div>
-              </div>
+              </div>        
 
               <div className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-xl">
-                <PiBookOpenBold size={22} className="text-gray-700 mt-1" />
+                <PiMedalBold size={22} className="text-gray-700 mt-1" />
                 <div>
                   <p className="text-sm font-semibold text-black">
-                    Curso Profissional de Full Stack Development
+                    Advanced English - C1
                   </p>
-                  <p className="text-xs text-gray-500">Alura / Rocketseat — 2021 – 2022</p>
+                  <p className="text-xs text-gray-500">Cambridge - 2023</p>
                 </div>
               </div>
             </div>
