@@ -468,8 +468,8 @@ const Projects = () => {
                     <div className="relative h-64 bg-linear-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
                       <Image
                         src={selectedProject.image}
-                        width={100}
-                        height={100}
+                        width={800}
+                        height={450}
                         alt={selectedProject.title}
                         className="w-full h-full object-cover"
                       />
