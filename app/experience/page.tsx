@@ -14,7 +14,7 @@ const Experience = () => {
       position: "Automation Intern",
       company: "BTG Pactual",
       location: "Remote",
-      period: "2025 – Present",
+      period: "August 2025 – November 2025",
       type: "Internship • Part-time",
       description:
         "Automation of internal processes using Python, AWS, React and API integrations. Working on improving efficiency and reliability across banking systems.",
@@ -29,7 +29,7 @@ const Experience = () => {
       position: "Full-Stack Developer",
       company: "Freelancer / Personal Projects",
       location: "Remote",
-      period: "2023 – Present",
+      period: "2023 – 2024",
       type: "Freelance",
       description:
         "Development of full-stack applications with Next.js, Node.js and relational and NoSQL databases. Focus on modern web architecture and user experience.",
