@@ -31,6 +31,26 @@ const Projects = () => {
 
 
   const projects = [
+  {
+    title: "Dargent — On-Chain Fund Platform with Strategy Allocation",
+    category: "Web3",
+    description:
+      "DeFi framework to build on-chain funds with strategy allocation, async withdrawals, fees, and a risk engine.",
+    longDescription:
+      "Dargent is a suite of smart contracts for creating on-chain funds: users deposit ERC20s and receive proportional shares, the Manager allocates capital across strategies by weights, withdrawals are asynchronous through a WithdrawalQueue, fees are handled by FeeCollector, and RiskEngine computes fund risk based on approved strategies. Everything is orchestrated by ProductFactory and governed registries (assets/strategies/products).",
+    image: "/projects/dargent.png",
+    technologies: ["Solidity", "Foundry", "EVM", "DeFi", "ERC-20", "EIP-1167", "Clones"],
+    github: "https://github.com/antoniovita/dargent",
+    stars: 0,
+    forks: 0,
+    date: "2026",
+    achievements: [
+      "Factory creates Fund + Manager with weighted strategy allocation",
+      "WithdrawalQueue enables asynchronous withdrawals",
+      "Governance registries for assets and strategies",
+      "Risk engine based on strategy composition",
+    ],
+  },
     {
       title: "IRSA: Medical Imaging Radiology",
       category: "Full-Stack",
