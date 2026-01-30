@@ -41,7 +41,7 @@ const Projects = () => {
     image: "/projects/dargent.png",
     technologies: ["Solidity", "Foundry", "EVM", "DeFi", "ERC-20", "EIP-1167", "Clones"],
     github: "https://github.com/antoniovita/dargent",
-    stars: 0,
+    stars: 1,
     forks: 0,
     date: "2026",
     achievements: [
@@ -49,6 +49,34 @@ const Projects = () => {
       "WithdrawalQueue enables asynchronous withdrawals",
       "Governance registries for assets and strategies",
       "Risk engine based on strategy composition",
+    ],
+  },
+  {
+    title: "Legis — Freelance Escrow Protocol",
+    category: "Web3",
+    description:
+      "Smart-contract system for freelance work with escrowed payments and milestone-based releases.",
+    longDescription:
+      "Legis is a modular on-chain escrow protocol designed for freelance agreements. A central EscrowFactory deploys lightweight JobEscrow instances using clones, validates job parameters, wires fee modules, registers escrows globally, and assigns a default arbiter. Each JobEscrow manages funds and job state, including milestones, funding, submissions, approvals, disputes, and refunds. An EscrowRegistry indexes all escrows by client and freelancer to enable efficient discovery and pagination. Fees are handled through pluggable modules: IFeeManager for pricing and tier logic, IFeeSplitter for fee distribution between parties, and IFeeCollector for receiving and accounting collected fees.",
+    image: "/projects/legis.png",
+    technologies: [
+      "Solidity",
+      "Foundry",
+      "EVM",
+      "Smart Contracts",
+      "EIP-1167",
+      "Clones"
+    ],
+    github: "https://github.com/antoniovita/legis",
+    stars: 1,
+    forks: 0,
+    date: "2026",
+    achievements: [
+      "Factory deploys lightweight JobEscrow instances via clones",
+      "Milestone-based escrow with approvals, disputes, and refunds",
+      "Global registry indexing escrows by client and freelancer",
+      "Modular fee system with pluggable pricing and distribution logic",
+      "Built-in arbiter support for dispute resolution"
     ],
   },
     {
