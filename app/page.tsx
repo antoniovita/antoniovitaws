@@ -419,13 +419,13 @@ export default function Home() {
                         <PiGithubLogo size={16} />
                         Code
                       </a>
-                      <a
-                        href="#"
+                      <Link
+                        href="/projects"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
                         View details
                         <PiArrowRightBold size={14} />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -447,7 +447,7 @@ export default function Home() {
                         Code
                       </a>
                       <Link
-                        href="projects"
+                        href="/projects"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
                         View details
@@ -474,7 +474,7 @@ export default function Home() {
                         Code
                       </a>
                       <a
-                        href="#"
+                        href="/projects"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
                         View details
