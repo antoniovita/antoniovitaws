@@ -358,7 +358,7 @@ export default function Home() {
             <p className="text-sm text-gray-600 font-medium">Social Media</p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="#"
+                href="https://www.instagram.com/antoniovita_fi/"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
               >
                 <PiInstagramLogo className="text-black" size={20} />
@@ -366,7 +366,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://github.com/antoniovita"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
               >
                 <PiGithubLogo className="text-black" size={20} />
@@ -374,7 +374,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/antonio-vita-6177922b7/"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
               >
                 <PiLinkedinLogo className="text-black" size={20} />
@@ -446,13 +446,13 @@ export default function Home() {
                         <PiGithubLogo size={16} />
                         Code
                       </a>
-                      <a
-                        href="#"
+                      <Link
+                        href="projects"
                         className="inline-flex items-center gap-2 text-xs px-3 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
                       >
                         View details
                         <PiArrowRightBold size={14} />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>
