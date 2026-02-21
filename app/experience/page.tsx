@@ -72,6 +72,26 @@ const Experience = () => {
       ],
     },
     {
+      name: "Duke University",
+      degree:
+        "Specialization in Decentralized Finance (DeFi)",
+      location: "Remote",
+      period: "Jan 2026 – Feb 2026",
+      status: "Completed",
+      description:
+        "Completed a specialization led by Campbell Harvey on how blockchain-based financial systems are reshaping traditional finance.",
+      highlights: [
+        "Core DeFi primitives: DEXs, AMMs, lending protocols, and stablecoins",
+        "Smart contract, oracle, governance, and custody risks",
+        "Layer 1 vs Layer 2 scaling: rollups, sharding, and sidechains",
+        "Token economics, incentives, and protocol design",
+        "Regulatory frameworks, securities law, and compliance",
+        "Security trade-offs between CeFi and DeFi",
+        "Environmental and sustainability implications of blockchain systems",
+        "Skills: DeFi, Blockchain, Smart Contracts, Crypto Economics, Risk Analysis, Financial Regulation, Ethereum, Digital Assets",
+      ],
+    },
+    {
       name: "Cultura Inglesa",
       degree: "English Language Course",
       location: "Niterói, Brazil",
