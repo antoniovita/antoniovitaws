@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   PiMapPinBold,
@@ -18,17 +19,34 @@ import {
 import Link from "next/link";
 
 export default function Home() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
 
     
-    <div className="flex justify-center items-center min-h-screen p-4 md:p-8">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={fadeUp}
+      transition={{ duration: 0.55, ease: "easeOut" }}
+      className="flex justify-center items-center min-h-screen pt-4 md:pt-8"
+    >
       <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r">
         
         {/* main section */}
         <div className="grid grid-cols-1 mt-20 lg:grid-cols-2 gap-8 lg:gap-12">
           
           {/* left part*/}
-          <div className="flex flex-col justify-center space-y-6 order-1 lg:order-1">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.08 }}
+            className="flex flex-col justify-center space-y-6 order-1 lg:order-1"
+          >
             
             <div className="flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black text-white rounded-full text-xs">
@@ -183,10 +201,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* right part */}
-          <div className="flex flex-col items-center lg:items-end space-y-6 order-2 lg:order-2">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.16 }}
+            className="flex flex-col items-center lg:items-end space-y-6 order-2 pt-4 lg:order-2"
+          >
             
             {/* image */}
             <div className="relative w-full max-w-md">
@@ -244,7 +268,7 @@ export default function Home() {
 
 
             {/* projects */}
-            <div className="w-full max-w-md lg:block hidden">
+            <div className="w-full max-w-md lg:block hidden pb-6">
               <div className="flex items-center justify-between mb-3">
                 <p className="text-sm text-gray-600 font-medium">Projects</p>
                 <a
@@ -348,11 +372,17 @@ export default function Home() {
                 </Swiper>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* mobile */}
-        <div className="lg:hidden mt-8 space-y-8">
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="lg:hidden mt-8 space-y-8"
+        >
           
           <div className="pt-4 space-y-3">
             <p className="text-sm text-gray-600 font-medium">Social Media</p>
@@ -552,8 +582,8 @@ export default function Home() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

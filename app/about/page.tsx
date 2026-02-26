@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import {
   PiGraduationCapBold,
   PiCodeBold,
@@ -10,6 +11,11 @@ import {
 } from "react-icons/pi";
 
 const About = () => {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0 },
+  };
+
   const timelineEvents = [
     {
       year: "2017",
@@ -71,8 +77,14 @@ const About = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4 md:p-8">
-      <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={fadeUp}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="flex justify-center items-center min-h-screen pt-4 md:pt-8"
+    >
+      <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r py-12">
         {/* main section */}
         <div className="grid grid-cols-1 mt-20 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* left part */}
@@ -91,7 +103,7 @@ const About = () => {
                 My journey in technology began at a very young age, when I received my first computer at the age of eight and spent countless hours exploring, experimenting, and trying to understand how things worked. What started as simple curiosity soon became a genuine passion for technology.
               </p>
               <p>
-                My first formal contact with programming happened at school, where I learned the basics through Scratch and later wrote my very first "Hello World" in Python in 2017. By my last year of high school, I had already decided that Computer Science would be my future, and from that moment on, I fully immersed myself in learning how to code.
+                My first formal contact with programming happened at school, where I learned the basics through Scratch and later wrote my very first &quot;Hello World&quot; in Python in 2017. By my last year of high school, I had already decided that Computer Science would be my future, and from that moment on, I fully immersed myself in learning how to code.
               </p>
               <p>
                 Since then, I have explored areas such as web and mobile development, building applications and strengthening my foundations in software engineering. Eventually, I chose to specialize in Web3, as I believe in the future of a decentralized internet and the potential of blockchain technologies. Today, I combine academic knowledge with hands-on experience to turn ideas into impactful digital products.              
@@ -237,7 +249,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

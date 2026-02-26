@@ -1,7 +1,7 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PiHouseSimpleBold, PiUserCircleBold, PiBookBookmarkBold, PiCertificateBold, PiMailboxBold, PiListBold, PiXBold, PiBookOpenBold} from "react-icons/pi";
+import { PiHouseSimpleBold, PiUserCircleBold, PiBasketBold, PiCertificateBold, PiListBold, PiXBold, PiBookOpenBold} from "react-icons/pi";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
@@ -12,9 +12,10 @@ const NavBar = () => {
 
     const menuItems = [
         { name: 'Home', icon: PiHouseSimpleBold, href: '/' },
-        { name: 'About', icon: PiUserCircleBold, href: '/about' },
-        { name: 'Experience', icon: PiCertificateBold, href: '/experience' },
         { name: 'Projects', icon: PiBookOpenBold, href: '/projects' },
+        { name: 'Services', icon: PiBasketBold, href: '/services' },
+        { name: 'Experience', icon: PiCertificateBold, href: '/experience' },
+        { name: 'About', icon: PiUserCircleBold, href: '/about' },
     ];
 
     const isActiveRoute = (href: string) => {
@@ -23,10 +24,6 @@ const NavBar = () => {
         }
         return pathname.startsWith(href);
     };
-
-    useEffect(() => {
-        setMobileMenuOpen(false);
-    }, [pathname]);
 
     return (
         <>
@@ -43,7 +40,7 @@ const NavBar = () => {
                         </div>
 
                         {/* menu */}
-                        <div className="flex items-center border border-gray-200 w-100 py-2 rounded-2xl justify-around">
+                        <div className="flex items-center gap-1 border border-gray-200 bg-white/90 backdrop-blur-sm p-1 rounded-2xl">
                             {menuItems.map((item) => {
                                 const Icon = item.icon;
                                 const isActive = isActiveRoute(item.href);
@@ -52,35 +49,37 @@ const NavBar = () => {
                                     <Link
                                         key={item.name}
                                         href={item.href}
-                                        className="relative flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                                        className="relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors group"
                                     >
-                                        <motion.div
-                                            initial={false}
-                                            animate={{ scale: isActive ? 1.1 : 1 }}
-                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                        >
-                                            <Icon size={20} />
-                                        </motion.div>
-                                        <AnimatePresence mode="wait">
-                                            {isActive && (
-                                                <motion.span
-                                                    initial={{ opacity: 0, width: 0 }}
-                                                    animate={{ opacity: 1, width: "auto" }}
-                                                    exit={{ opacity: 0, width: 0 }}
-                                                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                                                    className="text-sm font-medium overflow-hidden whitespace-nowrap"
-                                                >
-                                                    {item.name}
-                                                </motion.span>
-                                            )}
-                                        </AnimatePresence>
                                         {isActive && (
                                             <motion.div
                                                 layoutId="activeTab"
-                                                className="absolute inset-0 border border-gray-100 rounded-lg -z-10"
-                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                                className="absolute inset-0 bg-gray-100 border border-gray-200 rounded-xl"
+                                                transition={{ type: "spring", stiffness: 360, damping: 32 }}
                                             />
                                         )}
+                                        <motion.div
+                                            initial={false}
+                                            animate={{ scale: isActive ? 1.08 : 1, y: isActive ? -0.5 : 0 }}
+                                            transition={{ type: "spring", stiffness: 340, damping: 24 }}
+                                            className="relative z-10"
+                                        >
+                                            <Icon size={18} className={isActive ? "text-black" : "text-gray-600 group-hover:text-black"} />
+                                        </motion.div>
+                                        <motion.span
+                                            initial={false}
+                                            animate={{
+                                                width: isActive ? "auto" : 0,
+                                                opacity: isActive ? 1 : 0,
+                                                marginLeft: isActive ? 2 : 0,
+                                            }}
+                                            transition={{ duration: 0.22, ease: "easeOut" }}
+                                            className={`relative z-10 whitespace-nowrap ${
+                                                isActive ? "text-black" : "text-gray-600"
+                                            }`}
+                                        >
+                                            {item.name}
+                                        </motion.span>
                                     </Link>
                                 );
                             })}
@@ -132,6 +131,7 @@ const NavBar = () => {
                                         <Link
                                             key={item.name}
                                             href={item.href}
+                                            onClick={() => setMobileMenuOpen(false)}
                                             className={`relative flex items-center gap-4 px-6 py-4 hover:bg-gray-100 transition-colors ${
                                                 isActive ? 'bg-gray-50' : ''
                                             }`}

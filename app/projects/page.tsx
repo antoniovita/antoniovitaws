@@ -11,6 +11,10 @@ import {
 } from "react-icons/pi";
 
 const Projects = () => {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0 },
+  };
 
     type Project = {
     title: string;
@@ -26,7 +30,6 @@ const Projects = () => {
     achievements: string[];
     };
 
-    const [project, setProject] = useState<Project | null>(null);
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 
@@ -322,7 +325,13 @@ const Projects = () => {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4 md:p-8">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={fadeUp}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="flex justify-center items-center min-h-screen p-4 md:p-8"
+    >
       <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r py-12">
 
         {/* header */}
@@ -606,7 +615,7 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
-    </div>
+    </motion.div>
   );
 };
 
