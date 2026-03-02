@@ -108,11 +108,11 @@ export default function Home() {
               <p className="text-sm text-gray-600 font-medium">Social Media</p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://www.instagram.com/antoniovita_fi/"
+                  href="https://www.instagram.com/defi.institute/"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
                 >
                   <PiInstagramLogo className="text-black" size={20} />
-                  antoniovita_in
+                  defi.institute
                 </a>
 
                 <a
