@@ -63,20 +63,6 @@ const Experience = () => {
       ],
     },
     {
-      name: "Instituto Gaylussac",
-      degree: "High School and Elementary Education",
-      location: "Niterói, Brazil",
-      period: "2015 – 2024",
-      status: "Completed",
-      description:
-        "Completed high school with focus on exact sciences. Participated in programming projects and mathematics olympiads.",
-      highlights: [
-        "Bronze medal in Kangaroo Math Competition",
-        "Gold in OBLI (Brazilian Informatics Olympiad)",
-        "Bronze in OBA (Brazilian Astronomy Olympiad)",
-      ],
-    },
-    {
       name: "Duke University",
       degree:
         "Specialization in Decentralized Finance (DeFi)",
@@ -94,6 +80,20 @@ const Experience = () => {
         "Security trade-offs between CeFi and DeFi",
         "Environmental and sustainability implications of blockchain systems",
         "Skills: DeFi, Blockchain, Smart Contracts, Crypto Economics, Risk Analysis, Financial Regulation, Ethereum, Digital Assets",
+      ],
+    },
+        {
+      name: "Instituto Gaylussac",
+      degree: "High School and Elementary Education",
+      location: "Niterói, Brazil",
+      period: "2015 – 2024",
+      status: "Completed",
+      description:
+        "Completed high school with focus on exact sciences. Participated in programming projects and mathematics olympiads.",
+      highlights: [
+        "Bronze medal in Kangaroo Math Competition",
+        "Gold in OBLI (Brazilian Informatics Olympiad)",
+        "Bronze in OBA (Brazilian Astronomy Olympiad)",
       ],
     },
     {
