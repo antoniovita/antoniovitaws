@@ -67,7 +67,7 @@ const Footer = () => {
                 <PiGithubLogo size={18} />
               </a>
               <a
-                href="https://www.linkedin.com/in/antoniovita/"
+                href="https://www.linkedin.com/in/antonio-vita-6177922b7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 inline-flex items-center justify-center border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
@@ -76,7 +76,7 @@ const Footer = () => {
                 <PiLinkedinLogo size={18} />
               </a>
               <a
-                href="https://www.instagram.com/antoniovitaf/"
+                href="https://www.instagram.com/defi.institute/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 inline-flex items-center justify-center border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
