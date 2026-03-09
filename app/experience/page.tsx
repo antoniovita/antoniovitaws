@@ -82,6 +82,25 @@ const Experience = () => {
         "Skills: DeFi, Blockchain, Smart Contracts, Crypto Economics, Risk Analysis, Financial Regulation, Ethereum, Digital Assets",
       ],
     },
+    {
+      name: "Duke University",
+      degree: "Specialization in Financial Management",
+      location: "Remote",
+      period: "Feb 2026 – March 2026",
+      status: "Completed",
+      description:
+        "Completed a specialization focused on financial management and corporate finance fundamentals. The program covered key concepts used to evaluate business performance, analyze financial statements, and support strategic financial decision-making.",
+      highlights: [
+        "Financial statement analysis and interpretation",
+        "Time value of money and discounted cash flow concepts",
+        "Investment evaluation using NPV and IRR",
+        "Return on invested capital (ROIC) and performance measurement",
+        "Balance sheet structure and financial ratio analysis",
+        "Understanding EBITDA, EBIT, and profitability metrics",
+        "Using financial data to support business and investment decisions",
+        "Skills: Financial Statement Analysis, Net Present Value (NPV), Internal Rate of Return (IRR), Time Value of Money, EBITDA, EBIT, Return on Invested Capital (ROIC), Balance Sheet Analysis, Financial Decision-Making",
+      ],
+    },
         {
       name: "Instituto Gaylussac",
       degree: "High School and Elementary Education",
