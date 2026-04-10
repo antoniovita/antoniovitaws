@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import RouteDelayGate from "@/components/RouteDelayGate";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,10 +21,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const envDelay = process.env.NEXT_PUBLIC_GLOBAL_DELAY_MS;
+  const delayMs = Number.isFinite(Number(envDelay)) ? Number(envDelay) : 800;
+
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
         <NavBar />
+        <RouteDelayGate delayMs={delayMs} />
         {children}
         <Footer />
       </body>

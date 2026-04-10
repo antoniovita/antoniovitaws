@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import {
   PiGraduationCapBold,
   PiBookOpenBold,
@@ -9,12 +8,18 @@ import {
 } from "react-icons/pi";
 
 const Experience = () => {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    show: { opacity: 1, y: 0 },
-  };
-
   const experiences = [
+    {
+      position: "Software Engineer Intern",
+      company: "Parfin",
+      location: "Remote",
+      period: "March 2026 – Present",
+      type: "Internship • Part-time",
+      description:
+        "Atuo no desenvolvimento de soluções voltadas para blockchain, contribuindo na criação e manutenção de aplicações descentralizadas (dApps) e smart contracts.",
+      achievements: [],
+      technologies: ["Solidity", "Hardhat", "React", "TypeScript"]
+    },
     {
       position: "Automation Intern",
       company: "BTG Pactual",
@@ -165,13 +170,7 @@ const Experience = () => {
   ];
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="show"
-      variants={fadeUp}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="flex justify-center items-center min-h-screen pt-4 md:pt-8"
-    >
+    <div className="flex justify-center items-center min-h-screen pt-4 md:pt-8">
       <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r py-12">
         
         {/* header */}
@@ -375,7 +374,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

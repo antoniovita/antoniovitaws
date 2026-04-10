@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import {
   PiGraduationCapBold,
   PiCodeBold,
@@ -11,11 +10,6 @@ import {
 } from "react-icons/pi";
 
 const About = () => {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    show: { opacity: 1, y: 0 },
-  };
-
   const timelineEvents = [
     {
       year: "2017",
@@ -77,13 +71,7 @@ const About = () => {
   ];
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="show"
-      variants={fadeUp}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="flex justify-center items-center min-h-screen pt-4 md:pt-8"
-    >
+    <div className="flex justify-center items-center min-h-screen pt-4 md:pt-8">
       <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r py-12">
         {/* main section */}
         <div className="grid grid-cols-1 mt-20 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -249,7 +237,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

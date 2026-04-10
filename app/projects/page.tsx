@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import {
   PiGithubLogo,
@@ -11,11 +10,6 @@ import {
 } from "react-icons/pi";
 
 const Projects = () => {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    show: { opacity: 1, y: 0 },
-  };
-
     type Project = {
     title: string;
     category: string;
@@ -325,13 +319,7 @@ const Projects = () => {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="show"
-      variants={fadeUp}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="flex justify-center items-center min-h-screen p-4 md:p-8"
-    >
+    <div className="flex justify-center items-center min-h-screen p-4 md:p-8">
       <div className="w-[90%] max-w-7xl border-gray-200 border-dashed px-6 border-l border-r py-12">
 
         {/* header */}
@@ -482,24 +470,15 @@ const Projects = () => {
       </div>
 
       {/* modal */}
-      <AnimatePresence>
-        {selectedProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedProject(null)}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl"
-            >
 
               <div className="bg-white border-b border-gray-200 p-6 flex items-start justify-between">
                 <div className="flex-1">
@@ -610,12 +589,11 @@ const Projects = () => {
                   View on GitHub
                 </a>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
 
-    </motion.div>
+    </div>
   );
 };
 
