@@ -8,12 +8,13 @@ import Loading from "@/components/Loading";
 type RouteDelayGateProps = {
   delayMs?: number;
   label?: string;
+  showOnRouteChange?: boolean;
   transitionMs?: number;
 };
 
 export default function RouteDelayGate({
-  delayMs = 800,
-  label = "Carregando…",
+  delayMs = 5000,
+  showOnRouteChange = true,
   transitionMs = 200,
 }: RouteDelayGateProps) {
   const pathname = usePathname();
@@ -21,6 +22,7 @@ export default function RouteDelayGate({
   const [active, setActive] = useState(delayMs > 0);
   const delayTimeoutRef = useRef<number | null>(null);
   const exitTimeoutRef = useRef<number | null>(null);
+  const hasShownRef = useRef(false);
 
   const normalizedDelayMs = useMemo(() => {
     if (!Number.isFinite(delayMs)) return 0;
@@ -33,6 +35,9 @@ export default function RouteDelayGate({
   }, [transitionMs]);
 
   useEffect(() => {
+    if (!showOnRouteChange && hasShownRef.current) return;
+    if (!showOnRouteChange) hasShownRef.current = true;
+
     if (delayTimeoutRef.current !== null) window.clearTimeout(delayTimeoutRef.current);
     if (exitTimeoutRef.current !== null) window.clearTimeout(exitTimeoutRef.current);
 
@@ -55,8 +60,8 @@ export default function RouteDelayGate({
       if (delayTimeoutRef.current !== null) window.clearTimeout(delayTimeoutRef.current);
       if (exitTimeoutRef.current !== null) window.clearTimeout(exitTimeoutRef.current);
     };
-  }, [pathname, normalizedDelayMs, normalizedTransitionMs]);
+  }, [pathname, normalizedDelayMs, normalizedTransitionMs, showOnRouteChange]);
 
   if (!shouldRender) return null;
-  return <Loading fullScreen label={label} active={active} transitionMs={normalizedTransitionMs} />;
+  return <Loading fullScreen active={active} transitionMs={normalizedTransitionMs} />;
 }

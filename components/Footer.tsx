@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="w-[90%] max-w-7xl border-l border-r border-dashed border-gray-200 px-6 py-8 md:py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-3">
-            <Image src="/sign.png" width={150} height={100} alt="Antonio Vita" />
+            <Image src="/signature.png" width={150} height={100} alt="Antonio Vita" />
             <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
               Software Engineer and Computer Science student specialized
                in modern web development and blockchain technologies.           

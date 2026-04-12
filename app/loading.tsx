@@ -1,5 +1,5 @@
 import Loading from "@/components/Loading";
 
 export default function AppLoading() {
-  return <Loading fullScreen label="Carregando…" />;
+  return <Loading fullScreen/>;
 }

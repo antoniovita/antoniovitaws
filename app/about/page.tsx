@@ -60,6 +60,20 @@ const About = () => {
         "Worked on automating internal banking processes using Python, AWS, and React, improving efficiency and reliability across systems.",
       icon: <PiBriefcaseBold size={20} />,
     },
+    {
+      year: "2025",
+      title: "Pivot to Web3 & Blockchain",
+      description:
+        "By the end of 2025, I pivoted toward Web3 because I strongly believe in the long-term potential of blockchain technology, focusing mainly on EVM-based development.",
+      icon: <PiBookOpenBold size={20} />,
+    },
+    {
+      year: "2026",
+      title: "Software Engineer Intern — Parfin",
+      description:
+        "Developing and maintaining smart contracts, primarily for EVM-compatible chains, and contributing to the Web3 product stack with a focus on security, reliability, and developer experience.",
+      icon: <PiBriefcaseBold size={20} />,
+    },
   ];
 
   const languages = [
@@ -108,7 +122,7 @@ const About = () => {
                 </div>
                 <div className="p-4 bg-white border border-gray-200 rounded-xl">
                   <p className="text-sm font-semibold text-black">Backend Development</p>
-                  <p className="text-xs text-gray-500 mt-1">Node.js, SpringBoot, PostgreSQL, APIs</p>
+                  <p className="text-xs text-gray-500 mt-1">Nest.js, SpringBoot, FastAPI</p>
                 </div>
                 <div className="p-4 bg-white border border-gray-200 rounded-xl">
                   <p className="text-sm font-semibold text-black">Smart Contracts</p>
